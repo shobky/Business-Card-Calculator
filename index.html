@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="styleSheet" href="./styles.css">
+
+</head>
+
+<body class="container">
+    <div class="content">
+        <h1 class="header center_txt"> Calculate Your Rewards</h1>
+
+        <form class="form" onsubmit="calc()">
+
+            <label class="label center_txt" for="Vendor"> Vendor/Bills</label>
+            <input required onkeyup="trackChangeVendor(this.value)" class="input" name="vendor" id="vendor"
+                type="number">
+
+            <label class="label center_txt" for="Media">Media/Ad Spend</label>
+            <input required onkeyup="trackChangeMedia(this.value)" class="input" type="number">
+
+            <label class="label center_txt" for="Crop"> Corp/spend</label>
+            <input required onkeyup="trackChangeCrop(this.value)" class="input" type="number">
+
+            <label class="label center_txt" for="Team">Team Project</label>
+            <input required onkeyup="trackChangeTeam(this.value)" class="input" type="number">
+
+        </form>
+
+        <p class="footer center_txt"> Compare Your Rewards</p>
+
+        <div class="btn_container">
+            <button onclick="showBrex()" class="btn">Brex</button>
+            <button onclick="showStripe()" class="btn">Stripe</button>
+            <button onclick="showAmex()" class="btn">Amex</button>
+
+        </div>
+
+        <div class="answers">
+            <p class="answer" id="answer"></p>
+            <p class="answer" id="unlimited"></p>
+            <p class="answer" id="lifetime"></p>
+        </div>
+
+
+    </div>
+
+    <script src="./calc.js"></script>
+
+</body>
+
+</html>
